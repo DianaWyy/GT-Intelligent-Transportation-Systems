@@ -1,0 +1,19 @@
+import xlsxwriter
+
+inputFile = open("1805.stp.txt", "r")
+dataList = []
+workbook = xlsxwriter.Workbook('Script.xlsx')
+worksheet = workbook.add_worksheet()
+row = 0
+col = 0
+for line in inputFile:
+    line.strip()
+    Lst = line.split()
+    for data in Lst:
+        worksheet.write(row, col, data)
+        if(col == 3 and data[-1] not)
+        col += 1
+    row += 1
+    col = 0
+inputFile.close()
+workbook.close()
